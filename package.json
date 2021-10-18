@@ -1,0 +1,26 @@
+{
+  "name": "med-calcy",
+  "version": "1.0.0",
+  "description": "med-calulator",
+  "main": "lib/index.js",
+  "types":"lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinsmarttech/med-calcy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinsmarttech/med-calcy/issues"
+  },
+  "homepage": "https://github.com/vinsmarttech/med-calcy#readme",
+  "dependencies": {
+    "@types/node": "^16.11.1",
+    "typescript": "^4.4.4"
+  }
+}
