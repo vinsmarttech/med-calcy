@@ -1,6 +1,6 @@
 {
   "name": "med-calcy",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "med-calulator",
   "main": "lib/index.js",
   "types":"lib",
