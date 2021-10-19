@@ -1,11 +1,19 @@
+<<<<<<< Updated upstream
 export enum LENGTH_UNIT {
+=======
+export enum WEIGHT_UNIT {
+>>>>>>> Stashed changes
   MM,
   CM,
   M,
   KM,
   INCH,
+<<<<<<< Updated upstream
   FEET
 
+=======
+  FEET,
+>>>>>>> Stashed changes
 }
 export function legnthUnitConverter(
   length: any,
