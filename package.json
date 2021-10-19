@@ -1,9 +1,10 @@
 {
   "name": "med-calcy",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "med-calulator",
   "main": "lib/index.js",
   "types":"lib",
+  "typings": "lib/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"tsc -p ."
