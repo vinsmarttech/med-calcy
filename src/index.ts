@@ -45,6 +45,7 @@ export function weightUnitConverter(
         return weight * 1000;
       }
       break;
+ 
     case WEIGHT_UNIT.LB:
       if (unitTo === WEIGHT_UNIT.KG) {
         return weight / 2.20462;
@@ -93,6 +94,7 @@ export function weightUnitConverter(
         return weight * 35274;
       }
       break;
+ 
 
     default:
       return weight;
