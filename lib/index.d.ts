@@ -1,10 +1,10 @@
-export declare enum WEIGHT_UNIT {
-    LB = 0,
-    KG = 1,
-    G = 2,
-    OZ = 3,
-    POUND = 4,
-    TON = 5
-}
-export declare function weightUnitConverter(weight: any, unitFrom: WEIGHT_UNIT, unitTo: WEIGHT_UNIT): any;
+import { lengthUnitConverter, LENGTH_UNIT } from "./lengthUnitConverter";
+import { weightUnitConverter, WEIGHT_UNIT } from "./weightUnitConverter";
+declare const _default: {
+    weightUnitConverter: typeof weightUnitConverter;
+    WEIGHT_UNIT: typeof WEIGHT_UNIT;
+    lengthUnitConverter: typeof lengthUnitConverter;
+    LENGTH_UNIT: typeof LENGTH_UNIT;
+};
+export = _default;
 //# sourceMappingURL=index.d.ts.map

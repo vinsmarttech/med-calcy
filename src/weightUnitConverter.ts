@@ -6,7 +6,7 @@ export enum WEIGHT_UNIT {
   POUND,
   TON,
 }
-export function legnthUnitConverter(
+export function weightUnitConverter(
   weight: any,
   unitFrom: WEIGHT_UNIT,
   unitTo: WEIGHT_UNIT
