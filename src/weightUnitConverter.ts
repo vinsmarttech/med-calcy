@@ -6,6 +6,10 @@ export enum WEIGHT_UNIT {
   POUND,
   TON,
 }
+export enum VOLUME_UNIT {
+  L,
+  ML,
+}
 export function weightUnitConverter(
   weight: any,
   unitFrom: WEIGHT_UNIT,
