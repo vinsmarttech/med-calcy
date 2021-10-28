@@ -18,8 +18,6 @@ export class BMIBSA {
     ///Calculation for BMI 
     var bmiData = this.weight / (this.height * this.height);
 
-
-
     ///  returnResult={data:bmiData,unit:"KG /m2",result:"UNDERWEIGHT}
     return { data: bmiData, unit: "KG/ M 2", result: "" };
   }
@@ -27,8 +25,7 @@ export class BMIBSA {
     ///Calculation for BMI 
     var bsaData = (0.007184) * Math.pow(this.weight, 0.425) * Math.pow(this.height, 0.725);
 
-
     return bsaData
   }
-    //#endregion
-  }
+  //#endregion
+}
