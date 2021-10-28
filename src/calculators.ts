@@ -16,30 +16,34 @@ export function  bodyMassIndex({ weight, height }: BMIInputTypes) {
   ///Calculation for BMI
 
   var bmiData = weight / Math.pow(height, 2);
+
+  var result=null;
   if (bmiData < 18.5) {
-    return {
+    result={
       data: bmiData,
       unit: "KG/m2",
       remark: "Under Weight",
     };
   } else if (bmiData < 24.99) {
-    return {
+    result={
       data: bmiData,
       unit: "KG/m2",
       remark: "Normal",
     };
   } else if (bmiData < 29.99) {
-    return {
+    result={
       data: bmiData,
       unit: "KG/m2",
       remark: "Over Weight",
     };
   } else
-    return {
+  result={
       data: bmiData,
       unit: "KG/m2",
       remark: "Obessed",
     };
+
+    return result
 };
 
 export function bodySurfaceArea({ weight, height }: BMIInputTypes) {
