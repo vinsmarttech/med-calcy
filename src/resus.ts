@@ -1,57 +1,42 @@
-import { WEIGHT_UNIT } from "./weightUnitConverter";
-export interface BMIInputTypes {
-  weight: number;
-  unit?: WEIGHT_UNIT;
-  height: number;
-}
 
-export interface BSAInputTypes {
+
+import { LENGTH_UNIT } from "./lengthUnitConverter";
+import { VOLUME_UNIT, WEIGHT_UNIT } from "./weightUnitConverter";
+
+export interface ResusInputType {
   weight: number;
   unit?: WEIGHT_UNIT;
-  height: number;
 }
 //#region  input weight in kgs only and return value in 'MM'
 
-function bodyMassIndex({ weight, height }: BMIInputTypes) {
-  ///Calculation for BMI
+export class Resus {
+  weight: number;
 
-  var bmiData = weight / Math.pow(height, 2);
-  if (bmiData < 18.5) {
-    return {
-      data: bmiData,
-      unit: "KG/m2",
-      remark: "Under Weight",
-    };
-  } else if (bmiData < 24.99) {
-    return {
-      data: bmiData,
-      unit: "KG/m2",
-      remark: "Normal",
-    };
-  } else if (bmiData < 29.99) {
-    return {
-      data: bmiData,
-      unit: "KG/m2",
-      remark: "Over Weight",
-    };
-  } else
-    return {
-      data: bmiData,
-      unit: "KG/m2",
-      remark: "Obessed",
-    };
+  constructor({ weight, unit }: ResusInputType) {
+    this.weight = weight ? weight : 0;
+  }
+  endoCatheralTube() {
+    if (this.weight <= 1) {
+      return 2.5;
+    } else if (this.weight > 1 && this.weight <= 3) {
+      return { data: 3.0, unit: LENGTH_UNIT.CM };
+    } else if (this.weight > 3 && this.weight <= 5) {
+      return { data: 3.5, unit: LENGTH_UNIT.CM };
+    } else if (this.weight > 5) {
+
+      return { data: 4.0, unit: LENGTH_UNIT.CM };
+
+    }
+  }
+  umbricalArterialCatheer() {
+    return { data: this.weight * 3 + 9, unit: LENGTH_UNIT.CM };
+  }
+  //> UVC
+
+
+  drugAdrenaline() {
+    return { data: this.weight * 0.1, unit: VOLUME_UNIT.ML };
+  }
+
+  //#endregion
 }
-
-function bodySurfaceArea({ weight, height }: BMIInputTypes) {
-  var bsaData = 0.007184 * (Math.pow(weight, 0.425) * Math.pow(height, 0.725));
-  return {
-    data: bsaData,
-    unit: "KG/m2",
-    remark: "",
-  };
-}
-
-module.exports = {
-  BSA: bodySurfaceArea,
-  BMI: bodySurfaceArea,
-};
