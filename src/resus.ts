@@ -1,5 +1,3 @@
-
-
 import { LENGTH_UNIT } from "./lengthUnitConverter";
 import { VOLUME_UNIT, WEIGHT_UNIT } from "./weightUnitConverter";
 
@@ -23,16 +21,13 @@ export class Resus {
     } else if (this.weight > 3 && this.weight <= 5) {
       return { data: 3.5, unit: LENGTH_UNIT.CM };
     } else if (this.weight > 5) {
-
       return { data: 4.0, unit: LENGTH_UNIT.CM };
-
     }
   }
   umbricalArterialCatheer() {
     return { data: this.weight * 3 + 9, unit: LENGTH_UNIT.CM };
   }
   //> UVC
-
 
   drugAdrenaline() {
     return { data: this.weight * 0.1, unit: VOLUME_UNIT.ML };

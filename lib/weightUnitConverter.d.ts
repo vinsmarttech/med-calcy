@@ -6,5 +6,9 @@ export declare enum WEIGHT_UNIT {
     POUND = 4,
     TON = 5
 }
+export declare enum VOLUME_UNIT {
+    L = 0,
+    ML = 1
+}
 export declare function weightUnitConverter(weight: any, unitFrom: WEIGHT_UNIT, unitTo: WEIGHT_UNIT): any;
 //# sourceMappingURL=weightUnitConverter.d.ts.map
